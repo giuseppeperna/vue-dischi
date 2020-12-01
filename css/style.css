@@ -74,7 +74,7 @@ header img {
 #choose-genre {
     position: absolute;
     left:50%;
-    bottom:30px;
+    top:30px;
     transform: translate(-50%,0);
     width: 150px;
     height: 30px;

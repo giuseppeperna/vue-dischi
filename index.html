@@ -29,11 +29,11 @@
       <div class="cds-container container">
 
         <!-- Album template -->
-        <div class="cd" v-for="(element, index) in filterAlbum">
-            <img v-bind:src="filterAlbum[index].poster" alt="">
-            <h3>{{filterAlbum[index].title}}</h3>
-            <span class="author">{{filterAlbum[index].author}}</span>
-            <span class="year">{{filterAlbum[index].year}}</span>
+        <div class="cd" v-for="(album, index) in filterAlbum">
+            <img v-bind:src="album.poster" alt="">
+            <h3>{{album.title}}</h3>
+            <span class="author">{{album.author}}</span>
+            <span class="year">{{album.year}}</span>
         </div>
       </div>
       
