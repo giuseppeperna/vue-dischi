@@ -25,11 +25,10 @@
     </header>
 
     <!-- Vue app section -->
-    <div id="musicApp">
-      <!-- Album template -->
+    <div id="musicApp">    
       <div class="cds-container container">
 
-        <!-- Disco ad esempio -->
+        <!-- Album template -->
         <div class="cd" v-for="(element, index) in filterAlbum">
             <img v-bind:src="filterAlbum[index].poster" alt="">
             <h3>{{filterAlbum[index].title}}</h3>
@@ -37,6 +36,7 @@
             <span class="year">{{filterAlbum[index].year}}</span>
         </div>
       </div>
+      
       <!-- Music Genre selection -->
       <select name="genre" v-model="selectedGenre" id="choose-genre">
         <option value="">All</option>
