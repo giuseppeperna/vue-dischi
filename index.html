@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <!-- GOOGLE FONTS -->
+    <link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- VUE.JS -->
+    <script src="libs/vue.js" charset="utf-8"></script>
+
+    <!-- AXIOS -->
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
+    <title>Dischi Musicali</title>
+  </head>
+  <body>
+
+    <header>
+      <div class="container">
+          <img src="img/logo.png" alt="logo" />
+      </div>
+    </header>
+
+    <div id="musicApp">
+      <div class="cds-container container">
+        <!-- Disco ad esempio -->
+        <div class="cd" v-for="(element, index) in albums">
+            <img v-bind:src="albums[index].poster" alt="">
+            <h3>{{albums[index].title}}</h3>
+            <span class="author">{{albums[index].author}}</span>
+            <span class="year">{{albums[index].year}}</span>
+        </div>
+        <select name="genre" id="choose-genre">
+          <option value="pop">Pop</option>
+          <option value="rock">Rock</option>
+          <option value="metal">Metal</option>
+          <option value="jazz">Jazz</option>
+        </select>
+      </div>
+    </div>
+
+    <!-- JAVASCRIPT -->
+    <script src="js/main.js" charset="utf-8"></script>
+  </body>
+</html>
