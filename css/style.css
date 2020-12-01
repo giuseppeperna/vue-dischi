@@ -66,3 +66,21 @@ header img {
 .cd span.year {
     color: grey;
 }
+
+#musicApp {
+    position: relative;
+}
+
+#choose-genre {
+    position: absolute;
+    left:50%;
+    bottom:30px;
+    transform: translate(-50%,0);
+    width: 150px;
+    height: 30px;
+    border-radius: 10px;
+    border: none;
+    text-align: center;
+    font-size: 15px;
+    font-weight: 600;
+}

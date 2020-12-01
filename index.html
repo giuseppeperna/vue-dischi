@@ -24,22 +24,27 @@
       </div>
     </header>
 
+    <!-- Vue app section -->
     <div id="musicApp">
+      <!-- Album template -->
       <div class="cds-container container">
+
         <!-- Disco ad esempio -->
-        <div class="cd" v-for="(element, index) in albums">
-            <img v-bind:src="albums[index].poster" alt="">
-            <h3>{{albums[index].title}}</h3>
-            <span class="author">{{albums[index].author}}</span>
-            <span class="year">{{albums[index].year}}</span>
+        <div class="cd" v-for="(element, index) in filterAlbum">
+            <img v-bind:src="filterAlbum[index].poster" alt="">
+            <h3>{{filterAlbum[index].title}}</h3>
+            <span class="author">{{filterAlbum[index].author}}</span>
+            <span class="year">{{filterAlbum[index].year}}</span>
         </div>
-        <select name="genre" id="choose-genre">
-          <option value="pop">Pop</option>
-          <option value="rock">Rock</option>
-          <option value="metal">Metal</option>
-          <option value="jazz">Jazz</option>
-        </select>
       </div>
+      <!-- Music Genre selection -->
+      <select name="genre" v-model="selectedGenre" id="choose-genre">
+        <option value="">All</option>
+        <option value="pop">Pop</option>
+        <option value="rock">Rock</option>
+        <option value="metal">Metal</option>
+        <option value="jazz">Jazz</option>
+      </select>
     </div>
 
     <!-- JAVASCRIPT -->
