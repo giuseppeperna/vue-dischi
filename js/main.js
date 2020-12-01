@@ -23,7 +23,7 @@ const musicApp = new Vue({
                 if(this.selectedGenre !== "") {
                     return albums.genre.toLowerCase() === this.selectedGenre.toLowerCase();
                 } else {
-                    return this.albums
+                    return this.albums;
                 }         
             })
           },
