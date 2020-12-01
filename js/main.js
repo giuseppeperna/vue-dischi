@@ -20,7 +20,7 @@ const musicApp = new Vue({
     computed: { //Filter album by genre
         filterAlbum() {
             return this.albums.filter(albums => {
-              return albums.genre.toLocaleLowerCase().includes(this.selectedGenre.toLowerCase());
+              return albums.genre.toLowerCase().includes(this.selectedGenre.toLowerCase());
             })
           },
     }
